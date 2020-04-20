@@ -1,0 +1,234 @@
+footer{
+    display: flex;
+    width: 100%;
+    background-color: #595f6f;
+    color: #ffffff;
+    padding: 30px 0 30px 40px  ;
+    @media screen and( max-width: 768px){
+        flex-direction: column;
+        padding: 30px 40px;
+        text-align: center;
+        align-items: center;
+    }
+}
+.copy{
+    // padding-right: 214px;
+    width: 50%;
+}
+
+.copy,
+.info,
+.nav{
+    border-right: 1px solid #4d5362;
+    @media screen and( max-width: 768px){
+        padding:0;
+        border-bottom: 1px solid #4d5362;
+        border-right: none;
+
+    }
+}
+
+
+.copy_title{
+    font-size: 28px;
+    font-family: "Odin Rounded", sans-serif;
+    margin-bottom: 20px ;
+    @media screen and( max-width: 768px){
+        margin-bottom: 0;
+        font-size: 55px;
+    }
+    @media screen and( max-width: 767px){
+        font-size: 35px;
+    }
+
+}
+
+.copy_text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    margin-bottom: 30px;
+    opacity: .6;
+    @media screen and( max-width: 768px){
+        font-size: 22px;
+    }
+    @media screen and( max-width: 767px){
+        font-size: 15px;
+    }
+}
+.link{
+    text-decoration: none;
+
+}
+
+.copy_price{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    margin-bottom: 60px ;
+    opacity: .6;
+    @media screen and( max-width: 768px){
+        margin-bottom: 50px;
+        font-size: 17px;
+    }
+    @media screen and( max-width: 767px){
+        font-size: 13px;
+    }
+}
+
+.copy_signature{
+    font-family: fantasy;
+    font-size: 18px;
+    @media screen and( max-width: 768px){
+        margin-bottom: 40px;
+        font-size: 22px;
+    }
+    @media screen and( max-width: 767px){
+        font-size: 18px;
+    }
+}
+
+.copy_items{
+    color: #fff;
+    @media screen and( max-width: 768px){
+        margin-top: 0;
+        
+    }
+}
+
+.nav{
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    opacity: .7;
+    @media screen and( max-width: 768px){
+        flex-direction: column;
+        font-size: 30px;
+    }
+    @media screen and( max-width: 767px){
+        font-size: 20px;
+    }
+}
+
+.nav_first,
+.nav_second{
+    list-style-type: none;
+    padding: 80px 48px  ;
+    margin: 0;
+    @media screen and( max-width: 768px){
+        padding: 40px 0 0 0;
+    }
+    @media screen and( max-width: 1025px){
+        padding: 80px 23px;
+    }
+}
+
+.nav_first{
+    @media screen and( max-width: 768px){
+        padding: 40px 0 0 0;
+    }
+}
+
+.nav_second{
+    @media screen and( max-width: 768px){
+        padding: 0 0 40px 0 ;
+    }
+}
+
+.nav_item{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and( max-width: 768px){
+        border: none;
+    }
+}
+
+.info_title{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    @media screen and( max-width: 1025px){
+        font-size: 14px;
+    }
+    @media screen and( max-width: 768px){
+        margin-top: 45px;
+        font-size: 23px;
+        margin-bottom: 35px;
+    }
+    @media screen and( max-width: 767px){
+        font-size: 18px;
+    }
+    
+}
+
+.info_email{
+    border: none;
+    padding: 10px 15px 15px ;
+    border-radius: 5px;
+    background-color: rgb(129, 129, 129);
+    margin: 0 42px 40px 44px;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: rgb(255, 255, 255, 0.5);
+      }
+      &:-moz-placeholder { /* Firefox 19+ */
+        color: rgb(255, 255, 255, 0.5);
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: rgb(255, 255, 255, 0.5);
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: rgb(255, 255, 255, 0.5);
+      }
+      @media screen and( max-width: 1025px){
+          margin: 0px 20px 40px 20px;
+          padding: 10px 10px 10px;
+      }
+      @media screen and( max-width: 768px){
+        margin-bottom: 45px;
+        font-size: 23px;
+    }
+    @media screen and( max-width: 767px){
+        font-size: 17px;
+    }
+
+}
+
+.info_list{
+    list-style-type: none;
+    display: flex;
+}
+
+.info_item{
+    opacity: .5;
+    transition: opacity .3s ease-in-out; //было пропущенно свойтсов
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+    
+}
+.social_net{
+    width: 30px ;
+    height: 30px ;
+    margin-right: 40px;
+    @media screen and( max-width: 1025px){
+        margin-right: 30px;
+        
+    }
+    @media screen and( max-width: 768px){
+        margin-bottom: 45px;
+        width: 76px;
+        height: 50px;
+    }
+    @media screen and( max-width: 767px){
+        width: 50px;
+        height: 41px;
+    }
+}

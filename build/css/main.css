@@ -1,0 +1,614 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  line-height: 1;
+  color: #ffffff;
+  font-family: "Odin Rounded";
+  text-align: center;
+  font-size: 40px;
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 95px;
+  }
+}
+
+.search {
+  position: relative;
+}
+.search button[type=submit] {
+  background: none;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .search button[type=submit] {
+    pointer-events: none;
+  }
+}
+.search #search {
+  position: absolute;
+  right: 40px;
+  width: 0;
+  padding: 0px;
+  height: 5px;
+  top: 15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: opacity 0.5s ease-in-outd;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  background-color: #fff;
+  border-radius: 3px;
+  color: #333;
+  -webkit-box-shadow: 0 3px 0 #736357;
+  box-shadow: 0 3px 0 #736357;
+}
+.search:hover #search, .search:focus #search {
+  display: block;
+  width: 300px;
+  min-height: 30px;
+  padding: 20px 20px 20px 20px;
+  outline: #fff;
+}
+.search svg {
+  width: 35px;
+  height: 30px;
+}
+.search path {
+  fill: #fff;
+}
+@media screen and (max-width: 767px) {
+  .search svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.bike {
+  position: relative;
+  padding-top: 220px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .bike {
+    width: 100%;
+    padding: 77px 0 90px 0;
+  }
+}
+@media screen and (max-width: 767) {
+  .bike {
+    background-size: 100%;
+    height: auto;
+    padding: 25vw 0;
+    background-size: 103%;
+  }
+}
+.bike:before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.product {
+  background: url("../../build/img/Calque 5.svg") center bottom no-repeat;
+  background-size: 103%;
+}
+.product:before {
+  background-image: linear-gradient(0deg, rgba(71, 177, 175, 0.5) 0%, rgba(25, 62, 173, 0.5) 100%);
+}
+@media screen and (max-width: 1366px) {
+  .product {
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 767px) {
+  .product {
+    background-size: 106%;
+    padding: 115px 0 60px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .product {
+    height: auto;
+    padding: 25vw 0;
+    background-size: 103%;
+  }
+}
+
+.card {
+  background: url("../../build/img/Calque 4.svg") center bottom no-repeat;
+  background-size: 131%;
+}
+@media screen and (max-width: 1366px) {
+  .card {
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 767px) {
+  .card {
+    background-size: 106%;
+    padding: 115px 0 60px 0;
+  }
+}
+.card:before {
+  background-image: linear-gradient(0deg, #e192ff 0%, #7e30c0 100%);
+}
+@media screen and (max-width: 767px) {
+  .card {
+    height: auto;
+    padding: 25vw 0;
+  }
+}
+
+.bike__descr {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.product_title {
+  font-family: "High Tide", sans-serif;
+  font-weight: normal;
+}
+
+.card_title {
+  font-family: "DymaxionScript", sans-serif;
+}
+
+.product_title,
+.card_title {
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+@media screen and (max-width: 768px) {
+  .product_title,
+.card_title {
+    font-size: 100px;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .product_title,
+.card_title {
+    font-size: 45px;
+  }
+}
+
+.product_text,
+.card_text {
+  color: #ffffff;
+  font-family: "Odin Rounded", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 45px;
+  line-height: 1;
+  margin: 0 0 45px 0;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .product_text,
+.card_text {
+    font-size: 55px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .product_text,
+.card_text {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+}
+
+.product_button,
+.card_button {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.product_button:hover,
+.card_button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+@media screen and (max-width: 768px) {
+  .product_button,
+.card_button {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .product_button,
+.card_button {
+    font-size: 14px;
+  }
+}
+
+.w-100p {
+  width: 100%;
+  padding: 77px 0 90px 0;
+  background-size: 106%;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.tablet-title {
+  font-size: 100px;
+  margin-bottom: 35px;
+}
+
+.tablet-text {
+  font-size: 55px;
+}
+
+.tablet-button {
+  font-size: 25px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  background-color: #595f6f;
+  color: #ffffff;
+  padding: 30px 0 30px 40px;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.copy {
+  width: 50%;
+}
+
+.copy,
+.info,
+.nav {
+  border-right: 1px solid #4d5362;
+}
+@media screen and (max-width: 768px) {
+  .copy,
+.info,
+.nav {
+    padding: 0;
+    border-bottom: 1px solid #4d5362;
+    border-right: none;
+  }
+}
+
+.copy_title {
+  font-size: 28px;
+  font-family: "Odin Rounded", sans-serif;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .copy_title {
+    margin-bottom: 0;
+    font-size: 55px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .copy_title {
+    font-size: 35px;
+  }
+}
+
+.copy_text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 30px;
+  opacity: 0.6;
+}
+@media screen and (max-width: 768px) {
+  .copy_text {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .copy_text {
+    font-size: 15px;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.copy_price {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  margin-bottom: 60px;
+  opacity: 0.6;
+}
+@media screen and (max-width: 768px) {
+  .copy_price {
+    margin-bottom: 50px;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .copy_price {
+    font-size: 13px;
+  }
+}
+
+.copy_signature {
+  font-family: fantasy;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .copy_signature {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .copy_signature {
+    font-size: 18px;
+  }
+}
+
+.copy_items {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .copy_items {
+    margin-top: 0;
+  }
+}
+
+.nav {
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav {
+    font-size: 20px;
+  }
+}
+
+.nav_first,
+.nav_second {
+  list-style-type: none;
+  padding: 80px 48px;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .nav_first,
+.nav_second {
+    padding: 40px 0 0 0;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .nav_first,
+.nav_second {
+    padding: 80px 23px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav_first {
+    padding: 40px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav_second {
+    padding: 0 0 40px 0;
+  }
+}
+
+.nav_item {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .info {
+    border: none;
+  }
+}
+
+.info_title {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1025px) {
+  .info_title {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info_title {
+    margin-top: 45px;
+    font-size: 23px;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .info_title {
+    font-size: 18px;
+  }
+}
+
+.info_email {
+  border: none;
+  padding: 10px 15px 15px;
+  border-radius: 5px;
+  background-color: #818181;
+  margin: 0 42px 40px 44px;
+}
+.info_email::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.5);
+}
+.info_email:-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.5);
+}
+.info_email:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(255, 255, 255, 0.5);
+}
+.info_email:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 1025px) {
+  .info_email {
+    margin: 0px 20px 40px 20px;
+    padding: 10px 10px 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info_email {
+    margin-bottom: 45px;
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .info_email {
+    font-size: 17px;
+  }
+}
+
+.info_list {
+  list-style-type: none;
+  display: flex;
+}
+
+.info_item {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+.info_item:hover {
+  opacity: 1;
+}
+
+.social_net {
+  width: 30px;
+  height: 30px;
+  margin-right: 40px;
+}
+@media screen and (max-width: 1025px) {
+  .social_net {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .social_net {
+    margin-bottom: 45px;
+    width: 76px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .social_net {
+    width: 50px;
+    height: 41px;
+  }
+}
+
+/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on March 29, 2020 */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../build/fonts_bike/Open Sans/opensans-light-webfont.woff2") format("woff2"), url("../../build/fonts_bike/Open Sans/opensans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on March 29, 2020 */
+@font-face {
+  font-family: "DymaxionScript";
+  src: url("../../build/fonts_bike/DymaxionScript/web fonts/dymaxionscript_regular_macroman/DymaxionScript-webfont.woff");
+  src: url("DymaxionScript-webfont.eot?#iefix") format("embedded-opentype"), url("DymaxionScript-webfont.woff2") format("woff2"), url("../../build/fonts_bike/DymaxionScript/web fonts/dymaxionscript_regular_macroman/DymaxionScript-webfont.woff") format("woff"), url("DymaxionScript-webfont.ttf") format("truetype"), url("DymaxionScript-webfont.svg#dymaxionscriptregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on April 13, 2020 */
+@font-face {
+  font-family: "High Tide";
+  src: url("../fonts_bike/HighTide/hightide-regular-webfont.woff2") format("woff2"), url("../fonts_bike/HighTide/hightide-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "High Tide";
+  src: url("../fonts_bike/HighTide/hightide-regular-webfont.woff2") format("woff2"), url("../fonts_bike/HighTide/hightide-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Odin Rounded";
+  src: url("../../build/fonts_bike/Odin Rounded/odin_rounded_-_regular-webfont.woff2") format("woff2"), url("../../build/fonts_bike/Odin Rounded/odin_rounded_-_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=main.css.map */
